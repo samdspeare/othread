@@ -6,9 +6,9 @@ Othread is an obfuscation tool based on LLVM, which can perfectly realize the ob
 
 We present a confusion idea called Execution trajectory obfuscation which make the program execution trajectory with function as the unit converted from the call execution in a single thread to the jump execution in the mode of repeated switching between multiple threads. Experiment results show that the application of this obfuscation algorithm program can effectively resist the mainstream reverse analysis methods, and at the same time has a low impact on the efficiency of program execution. 
 
-![demo1](img\demo1.png)
+![demo1](img/demo1.png)
 
-![demo2](img\demo2.png)
+![demo2](img/demo2.png)
 
 ## 0x02 How to use
 
@@ -28,7 +28,6 @@ Usage: `othread.exe ..\example\aes\aes.bc ..\example\aes\aes-obf.bc`
 5. twoif	Simulated annealing algorithm		`Usage:twoif.exe ./data/test`
 
 
-
 *Table1 Program execution efficiency before and after obfuscation*
 
 | example | before(s) | after(s) | efficiency |
@@ -40,92 +39,90 @@ Usage: `othread.exe ..\example\aes\aes.bc ..\example\aes\aes-obf.bc`
 | twoif   | 0.128     | 0.447    | 28.6%      |
 
 
-
 Due to the time loss caused by the communication between threads, Othead is mainly suitable for functional programs, the execution efficiency of highly computationally intensive programs (one function called over 10000000 times like simulated annealing algorithm) has decreased significantly
-
 
 
 ## 0x04 Screenshot
 
-Figure1.1 Function call relationship before and after obfuscation-aes
+*Figure1.1 Function call relationship before and after obfuscation-aes*
 
-![aes](img\ObfEffect\aes.jpg)
+![aes](img/ObfEffect/aes.jpg)
 
-Figure1.2 Function call relationship before and after obfuscation-rsa
+*Figure1.2 Function call relationship before and after obfuscation-rsa*
 
-![rsa](img\ObfEffect\rsa.jpg)
+![rsa](img/ObfEffect/rsa.jpg)
 
-Figure1.3 Function call relationship before and after obfuscation-gzip
+*Figure1.3 Function call relationship before and after obfuscation-gzip*
 
-![gzip](img\ObfEffect\gzip.jpg)
+![gzip](img/ObfEffect/gzip.jpg)
 
-Figure1.4 Function call relationship before and after obfuscation-parser
+*Figure1.4 Function call relationship before and after obfuscation-parser*
 
-![parser](img\ObfEffect\parser.jpg)
+![parser](img/ObfEffect/parser.jpg)
 
-Figure1.5 Function call relationship before and after obfuscation-twoif
+*Figure1.5 Function call relationship before and after obfuscation-twoif*
 
-![twoif](img\ObfEffect\twoif.jpg)
+![twoif](img/ObfEffect/twoif.jpg)
 
-Figure2.1 Number of function replacements after obfuscation-aes
+*Figure2.1 Number of function replacements after obfuscation-aes*
 
-![aes-subcall](img\ObfEffect\aes-subcall.jpg)
+![aes-subcall](img/ObfEffect/aes-subcall.jpg)
 
-Figure2.2 Number of function replacements after obfuscation-rsa
+*Figure2.2 Number of function replacements after obfuscation-rsa*
 
-![rsa-subcall](img\ObfEffect\rsa-subcall.jpg)
+![rsa-subcall](img/ObfEffect/rsa-subcall.jpg)
 
-Figure2.3 Number of function replacements after obfuscation-gzip
+*Figure2.3 Number of function replacements after obfuscation-gzip*
 
-![gzip-subcall](img\ObfEffect\gzip-subcall.jpg)
+![gzip-subcall](img/ObfEffect/gzip-subcall.jpg)
 
-Figure2.4 Number of function replacements after obfuscation-parser
+*Figure2.4 Number of function replacements after obfuscation-parser*
 
-![parser-subcall](img\ObfEffect\parser-subcall.jpg)
+![parser-subcall](img/ObfEffect/parser-subcall.jpg)
 
-Figure2.5 Number of function replacements after obfuscation-twoif
+*Figure2.5 Number of function replacements after obfuscation-twoif*
 
-![rsa-subcall](img\ObfEffect\rsa-subcall.jpg)
+![rsa-subcall](img/ObfEffect/rsa-subcall.jpg)
 
-Figure3.1 Instructions before and after obfuscation-aes
+*Figure3.1 Instructions before and after obfuscation-aes*
 
-![aes-decompile](img\ObfEffect\aes-decompile.jpg)
+![aes-decompile](img/ObfEffect/aes-decompile.jpg)
 
-Figure3.2 Instructions before and after obfuscation-rsa
+*Figure3.2 Instructions before and after obfuscation-rsa*
 
-![rsa-decompile](img\ObfEffect\rsa-decompile.jpg)
+![rsa-decompile](img/ObfEffect/rsa-decompile.jpg)
 
-Figure3.3 Instructions before and after obfuscation-gzip
+*Figure3.3 Instructions before and after obfuscation-gzip*
 
-![gzip-decompile](img\ObfEffect\gzip-decompile.jpg)
+![gzip-decompile](img/ObfEffect/gzip-decompile.jpg)
 
-Figure3.4 Instructions before and after obfuscation-parser
+*Figure3.4 Instructions before and after obfuscation-parser*
 
-![parser-decompile](img\ObfEffect\parser-decompile.jpg)
+![parser-decompile](img/ObfEffect/parser-decompile.jpg)
 
-Figure3.5 Instructions before and after obfuscation-twoif
+*Figure3.5 Instructions before and after obfuscation-twoif*
 
-![twoif-decompile](img\ObfEffect\twoif-decompile.jpg)
+![twoif-decompile](img/ObfEffect/twoif-decompile.jpg)
 
-Figure4.1 Execution efficiency before and after obfuscation-aes
+*Figure4.1 Execution efficiency before and after obfuscation-aes*
 
-![aes](img\ExeEffect\aes.jpg)
+![aes](img/ExeEffect/aes.jpg)
 
-Figure4.2 Execution efficiency before and after obfuscation-rsa
+*Figure4.2 Execution efficiency before and after obfuscation-rsa*
 
-![rsa](img\ExeEffect\rsa.jpg)
+![rsa](img/ExeEffect/rsa.jpg)
 
-Figure4.3 Execution efficiency before and after obfuscation-gzip
+*Figure4.3 Execution efficiency before and after obfuscation-gzip*
 
-![gzip](img\ExeEffect\gzip.jpg)
+![gzip](img/ExeEffect/gzip.jpg)
 
-Figure4.4 Execution efficiency before and after obfuscation-parser
+*Figure4.4 Execution efficiency before and after obfuscation-parser*
 
-![parser](img\ExeEffect\parser.jpg)
+![parser](img/ExeEffect/parser.jpg)
 
-Figure4.5 Execution efficiency before and after obfuscation-twoif
+*Figure4.5 Execution efficiency before and after obfuscation-twoif*
 
-![twoif](img\ExeEffect\twoif.jpg)
+![twoif](img/ExeEffect/twoif.jpg)
 
 ## 0x05 Paper
 

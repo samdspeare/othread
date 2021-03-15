@@ -82,7 +82,7 @@ Due to the time loss caused by the communication between threads, Othead is main
 
 *Figure2.5 Number of function replacements after obfuscation-twoif*
 
-![rsa-subcall](img/ObfEffect/rsa-subcall.jpg)
+![rsa-subcall](img/ObfEffect/twoif-subcall.jpg)
 
 *Figure3.1 Instructions before and after obfuscation-aes*
 

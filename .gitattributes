@@ -1,1 +1,9 @@
-*.roff linguist-language=C++
+*.1 linguist-language=C++
+*.2 linguist-language=C++
+*.3 linguist-language=C++
+*.4 linguist-language=C++
+*.5 linguist-language=C++
+*.s linguist-language=C++
+*.p linguist-language=C++
+*.x linguist-language=C++
+*.y linguist-language=C++
